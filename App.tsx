@@ -1,17 +1,17 @@
 import { StatusBar, useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import AppNavigator from './src/app/navigation/AppNavigator';
+import AppNavigator from './src/navigation/AppNavigator';
 import { Provider } from 'react-redux';
-import baseStore from './src/app/store/rootStore';
-import CustomToast from './src/shared/components/CustomToast';
+import commonStore from './src/store/commonStore';
+import CustomToast from './src/components/CustomToast';
+import { COLORS } from './src/constants/colors';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+ 
   return (
     <SafeAreaProvider>
-      <Provider store={baseStore}>
-        <StatusBar backgroundColor={'#000000'} barStyle={'light-content'} />
+      <Provider store={commonStore}>
+        <StatusBar backgroundColor={COLORS.BLACK} barStyle={'light-content'} />
         <AppNavigator />
         <CustomToast />
       </Provider>
