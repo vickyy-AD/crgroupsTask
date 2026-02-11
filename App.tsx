@@ -11,7 +11,7 @@ function App() {
   return (
     <SafeAreaProvider>
       <Provider store={commonStore}>
-        <StatusBar backgroundColor={COLORS.BLACK} barStyle={'light-content'} />
+        <StatusBar backgroundColor={COLORS.LIGHT_ORANGE} barStyle={'light-content'} />
         <AppNavigator />
         <CustomToast />
       </Provider>
